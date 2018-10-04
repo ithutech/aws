@@ -40,7 +40,8 @@
 						<label for="">Câu Hỏi Cho Diễn Giả</label>
 						<input type="text" name="Question" class="form-control">
 					</div>					
-					<button>ĐĂNG KÝ NÀO</button>
+				
+					<button id='btnSubmitDK' type='button'>ĐĂNG KÝ</button>
 				</form>
 			</div>
 		</div>
@@ -53,7 +54,7 @@
 		var $form = $('form#formDK'),
 			url = 'https://script.google.com/macros/s/AKfycbwUgseXgkWCmzeV2zK9FeUPSX5HDQv6i2xJQFCYpCMnBLFNlVVt/exec'
 
-		$('#formDK').on('click', function(e) {
+		$('#btnSubmitDK').on('click', function(e) {
 		  e.preventDefault();
 		  var jqxhr = $.ajax({
 			url: url,

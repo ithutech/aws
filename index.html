@@ -63,11 +63,15 @@
 				method: "GET",
 				dataType: "json",
 				data: $form.serializeObject()
-			  }).success(function(){					
-					alert('ĐĂNG KÝ THÀNH CÔNG! CẢM ƠN BẠN');
-				document.getElementById("formDK").reset();				
-			  });
+			  }).success(					
+					okDK();				
+			  );
 			})
+		
+		function okDK(){
+			alert('ĐĂNG KÝ THÀNH CÔNG! CẢM ƠN BẠN');
+			document.getElementById("formDK").reset();		
+		}
 		</script>
 		
 	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->

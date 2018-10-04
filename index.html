@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>KHOA CNTT - HUTECH - ĐĂNG KÝ THAM GIA SỰ KIỆN AWS - IoT</title>
+		<title>RegistrationForm_v2 by Colorlib</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- MATERIAL DESIGN ICONIC FONT -->
@@ -51,25 +51,21 @@
   crossorigin="anonymous"></script>
 		<script src="js/jquery.serialize-object.min.js"></script>
 		<script>
-			var $form = $('form#formDK'),
-				url = 'https://script.google.com/macros/s/AKfycbwUgseXgkWCmzeV2zK9FeUPSX5HDQv6i2xJQFCYpCMnBLFNlVVt/exec';
-			
-			$('#btnSubmitDK').on('click', function(e) {
-			  e.preventDefault();			  
-			  $.ajax({
-					url: url,
-					method: "GET",
-					dataType: "json",
-					data: $form.serializeObject(),
-					success: function(){
-						alert('success');
-						alert('ok');
-					},
-					error: function(){
-						alert('failure');
-					}
-				});
-			})
-		</script>		
+		var $form = $('form#formDK'),
+			url = 'https://script.google.com/macros/s/AKfycbwUgseXgkWCmzeV2zK9FeUPSX5HDQv6i2xJQFCYpCMnBLFNlVVt/exec';
+
+		$('#btnSubmitDK').on('click', function(e) {
+		  e.preventDefault();
+		  var jqxhr = $.ajax({
+			url: url,
+			method: "GET",
+			dataType: "json",
+			data: $form.serializeObject()
+		  }).success(
+			alert('ĐĂNG KÝ THÀNH CÔNG! CẢM ƠN BẠN');
+		  );
+		})
+		</script>
+		
 	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

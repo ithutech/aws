@@ -4,16 +4,12 @@
 		<meta charset="utf-8">
 		<title>KHOA CNTT - HUTECH - ĐĂNG KÝ THAM GIA SỰ KIỆN AWS - IoT</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 		<!-- MATERIAL DESIGN ICONIC FONT -->
-		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
-		
+		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">		
 		<!-- STYLE CSS -->
 		<link rel="stylesheet" href="css/style.css">
 	</head>
-
 	<body>
-
 		<div class="wrapper" style="background-image: url('images/bg-registration-form-2.jpg');">
 			<div class="inner">
 				<form id="formDK">
@@ -25,7 +21,7 @@
 						</div>
 						<div class="form-wrapper">
 							<label for="">Lớp</label>
-							<input type="text" name="Class" placeholder="Bạn học lớp nào?" class="form-control">
+							<input type="text" name="ClassName" placeholder="Bạn học lớp nào?" class="form-control">
 						</div>
 					</div>
 					<div class="form-wrapper">
@@ -34,34 +30,31 @@
 					</div>
 					<div class="form-wrapper">
 						<label for="">Điện Thoại</label>
-						<input type="text" name="phone" placeholder="Hãy giữ liên lạc?" class="form-control">
+						<input type="text" name="PhoneNumber" placeholder="Hãy giữ liên lạc?" class="form-control">
 					</div>
 					<div class="form-wrapper">
 						<label for="">Câu Hỏi Cho Diễn Giả</label>
-						<input type="text" name="Question" class="form-control">
+						<input type="text" name="Questions" class="form-control" placeholder="Bạn đang thắc mắc gì không?">
 					</div>				
 					<button id='btnSubmitDK' type='button'>ĐĂNG KÝ</button>
 				</form>
 			</div>
 		</div>
-		<script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.serialize-object.min.js"></script>
-		<script>		
-			var $form = $('form#formDK'),
-				url = 'https://script.google.com/macros/s/AKfycbwUgseXgkWCmzeV2zK9FeUPSX5HDQv6i2xJQFCYpCMnBLFNlVVt/exec';
-
+		<script>
+			//NEW VERSION
+			var frmInput = $('form#formDK');
+			var	url = 'https://script.google.com/macros/s/AKfycbxO6jGj0TKsPQ3V_Yddw96xON_EKmnH8rSJ39qlbIKcNubTOf5H/exec';
 			$('#btnSubmitDK').on('click', function(e) {
 			  e.preventDefault();
 			  var jqxhr = $.ajax({
 				url: url,
-				method: "GET",
-				dataType: "json",
-				data: $form.serializeObject()
-			  }).success(window.location.replace("https://ithutech.github.io/aws/sucess.html"));
+				method: 'GET',
+				dataType: 'json',
+				data: frmInput.serializeObject()
+			  }).success(window.location.replace('https://ithutech.github.io/aws/sucess.html'));
 			})
-		</script>		
+		</script>
 	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

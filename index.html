@@ -43,21 +43,20 @@
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.serialize-object.min.js"></script>
 		<script>
-			//NEW VERSION
-			var frmInput = $('form#formDK');
-			var	url = 'https://script.google.com/macros/s/AKfycbxO6jGj0TKsPQ3V_Yddw96xON_EKmnH8rSJ39qlbIKcNubTOf5H/exec';
+			//vvv
+			var $frmInput = $('form#formDK'),
+			url = 'https://script.google.com/macros/s/AKfycbxO6jGj0TKsPQ3V_Yddw96xON_EKmnH8rSJ39qlbIKcNubTOf5H/exec';
 			$('#btnSubmitDK').on('click', function(e) {
 			  e.preventDefault();
 			  var jqxhr = $.ajax({
 				url: url,
-				method: 'GET',
-				dataType: 'json',
-				data: frmInput.serializeObject()
-			  }).success(
-			  		//window.location.replace('https://ithutech.github.io/aws/sucess.html'));
-			  		alert('nono')
-			  );
-			})
+				method: "GET",
+				dataType: "json",
+				data: $frmInput.serializeObject()
+			  }).success(function(){					
+					alert("ok nono");
+			  });
+			})			
 		</script>
 	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

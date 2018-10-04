@@ -16,7 +16,7 @@
 
 		<div class="wrapper" style="background-image: url('images/bg-registration-form-2.jpg');">
 			<div class="inner">
-				<form action="">
+				<form action="" id="formDK">
 					<h3>ĐĂNG KÝ THAM GIA SỰ KIỆN AWS - IoT</h3>
 					<div class="form-group">
 						<div class="form-wrapper">
@@ -44,6 +44,26 @@
 				</form>
 			</div>
 		</div>
+		<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+		<script>
+		var $form = $('form#test-form'),
+			url = 'https://script.google.com/macros/s/AKfycbwUgseXgkWCmzeV2zK9FeUPSX5HDQv6i2xJQFCYpCMnBLFNlVVt/exec'
+
+		$('#formDK').on('click', function(e) {
+		  e.preventDefault();
+		  var jqxhr = $.ajax({
+			url: url,
+			method: "GET",
+			dataType: "json",
+			data: $form.serializeObject()
+		  }).success(
+			alert('dang ky thanh cong!')
+		  );
+		})
+		</script>
 		
 	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

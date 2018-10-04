@@ -61,10 +61,10 @@
 			method: "GET",
 			dataType: "json",
 			data: $form.serializeObject()
-		  }).success(
-			alert('ĐĂNG KÝ THÀNH CÔNG! CẢM ƠN BẠN');
-			document.getElementById("formDK").reset();
-		  );
+		   }).success(function(){					
+				alert('ĐĂNG KÝ THÀNH CÔNG! CẢM ƠN BẠN');
+				document.getElementById("formDK").reset();			
+			});
 		})
 		</script>
 		

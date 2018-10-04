@@ -51,7 +51,7 @@
 		<script src="js/jquery.serialize-object.min.js"></script>
 		<script>		
 			var $form = $('form#formDK'),
-				url = 'https://script.google.com/macros/s/AKfycbwUgseXgkWCmzeV2zK9FeUPSX5HDQv6i2xJQFCYpCMnBLFNlVVt/exec'
+				url = 'https://script.google.com/macros/s/AKfycbwUgseXgkWCmzeV2zK9FeUPSX5HDQv6i2xJQFCYpCMnBLFNlVVt/exec';
 
 			$('#btnSubmitDK').on('click', function(e) {
 			  e.preventDefault();
@@ -61,7 +61,7 @@
 				dataType: "json",
 				data: $form.serializeObject()
 			  }).success(
-				alert('ĐĂNG KÝ THÔNG TIN THÀNH CÔNG');
+				alert("ĐĂNG KÝ THÔNG TIN THÀNH CÔNG");
 			  );
 			})
 		</script>		

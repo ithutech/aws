@@ -54,18 +54,20 @@
 		var $form = $('form#formDK'),
 			url = 'https://script.google.com/macros/s/AKfycbwUgseXgkWCmzeV2zK9FeUPSX5HDQv6i2xJQFCYpCMnBLFNlVVt/exec';
 
+		
+		
 		$('#btnSubmitDK').on('click', function(e) {
-		  e.preventDefault();
-		  var jqxhr = $.ajax({
-			url: url,
-			method: "GET",
-			dataType: "json",
-			data: $form.serializeObject()
-		   }).success(function(){					
-				alert('ĐĂNG KÝ THÀNH CÔNG! CẢM ƠN BẠN');
-				document.getElementById("formDK").reset();			
-			});
-		})
+			  e.preventDefault();
+			  var jqxhr = $.ajax({
+				url: url,
+				method: "GET",
+				dataType: "json",
+				data: $form.serializeObject()
+			  }).success(function(){					
+					alert('ĐĂNG KÝ THÀNH CÔNG! CẢM ƠN BẠN');
+				document.getElementById("formDK").reset();				
+			  });
+			})
 		</script>
 		
 	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->

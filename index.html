@@ -50,22 +50,21 @@
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
 		<script src="js/jquery.serialize-object.min.js"></script>
-		<script>
-		var $form = $('form#formDK'),
-			url = 'https://script.google.com/macros/s/AKfycbwUgseXgkWCmzeV2zK9FeUPSX5HDQv6i2xJQFCYpCMnBLFNlVVt/exec';
+		<script>		
+			var $form = $('form#formDK'),
+				url = 'https://script.google.com/macros/s/AKfycbwUgseXgkWCmzeV2zK9FeUPSX5HDQv6i2xJQFCYpCMnBLFNlVVt/exec'
 
-		$('#btnSubmitDK').on('click', function(e) {
-		  e.preventDefault();
-		  var jqxhr = $.ajax({
-			url: url,
-			method: "GET",
-			dataType: "json",
-			data: $form.serializeObject()
-		  }).success(
-			alert('dang ky thanh cong!');
-		  );
-		})
-		</script>
-		
+			$('#btnSubmitDK').on('click', function(e) {
+			  e.preventDefault();
+			  var jqxhr = $.ajax({
+				url: url,
+				method: "GET",
+				dataType: "json",
+				data: $form.serializeObject()
+			  }).success(
+				alert('ĐĂNG KÝ THÔNG TIN THÀNH CÔNG');
+			  );
+			})
+		</script>		
 	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

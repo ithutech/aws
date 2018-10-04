@@ -17,25 +17,18 @@
 					<div class="form-group">
 						<div class="form-wrapper">
 							<label for="">Mã SV</label>
-							<input type="text" name="StudentNo" placeholder="Bạn có Mã SV?" class="form-control">
+							<input type="text" name="fname" placeholder="Bạn có Mã SV?" class="form-control">
 						</div>
 						<div class="form-wrapper">
 							<label for="">Lớp</label>
-							<input type="text" name="ClassName" placeholder="Bạn học lớp nào?" class="form-control">
+							<input type="text" name="phone" placeholder="Bạn học lớp nào?" class="form-control">
 						</div>
 					</div>
 					<div class="form-wrapper">
 						<label for="">Họ Và Tên</label>
-						<input type="text" name="FullName" placeholder="Bạn là ai?" class="form-control">
+						<input type="text" name="subject" placeholder="Bạn là ai?" class="form-control">
 					</div>
-					<div class="form-wrapper">
-						<label for="">Điện Thoại</label>
-						<input type="text" name="PhoneNumber" placeholder="Hãy giữ liên lạc?" class="form-control">
-					</div>
-					<div class="form-wrapper">
-						<label for="">Câu Hỏi Cho Diễn Giả</label>
-						<input type="text" name="Questions" class="form-control" placeholder="Bạn đang thắc mắc gì không?">
-					</div>				
+					
 					<button id='btnSubmitDK' type='button'>ĐĂNG KÝ</button>
 				</form>
 			</div>
@@ -45,7 +38,7 @@
 		<script>
 			//vvv
 			var $frmInput = $('form#formDK'),
-			url = 'https://script.google.com/macros/s/AKfycbxO6jGj0TKsPQ3V_Yddw96xON_EKmnH8rSJ39qlbIKcNubTOf5H/exec';
+			url = 'https://script.google.com/macros/s/AKfycbzye9HWtC9R-nUrIVuYho3YMQ-cAKqtobF4Vz9T/exec';
 			$('#btnSubmitDK').on('click', function(e) {
 			  e.preventDefault();
 			  var jqxhr = $.ajax({

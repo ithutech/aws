@@ -107,7 +107,7 @@
 					<div class="form-group">
 						<div class="form-wrapper">
 							<label for="">Mã SV</label>
-							<input type="text" name="MASV" placeholder="Bạn có Mã SV?" class="form-control">
+							<input type="text" name="MASV" placeholder="Bạn có Mã SV?" class="form-control" required="" oninvalid="this.setCustomValidity('Nhập mã sinh viên')" oninput="setCustomValidity('')">
 						</div>
 						<div class="form-wrapper">
 							<label for="">Lớp</label>
@@ -116,21 +116,22 @@
 					</div>
 					<div class="form-wrapper">
 						<label for="">Họ Và Tên</label>
-						<input type="text" name="TEN" placeholder="Bạn là ai?" class="form-control">
+						<input type="text" name="TEN" placeholder="Bạn là ai?" class="form-control" required="" oninvalid="this.setCustomValidity('Nhập họ tên')" oninput="setCustomValidity('')">
 					</div>
           <div class="form-wrapper">
             <label for="">Email</label>
-            <input type="text" name="EMAIL" placeholder="Địa chỉ thư điện tử?" class="form-control">
+            <input type="email" name="EMAIL" placeholder="Địa chỉ thư điện tử?" class="form-control" required="" oninvalid="this.setCustomValidity('Nhập Email')" oninput="setCustomValidity('')">
           </div>
 					<div class="form-wrapper">
 						<label for="">Điện Thoại</label>
-						<input type="text" name="DIENTHOAI" placeholder="Hãy giữ liên lạc?" class="form-control">
+						<input type="text" name="DIENTHOAI" placeholder="Hãy giữ liên lạc?" class="form-control" required="" oninvalid="this.setCustomValidity('Nhập số điện thoại')" oninput="setCustomValidity('')">
 					</div>
 					<div class="form-wrapper">
 						<label for="">Câu Hỏi Cho Diễn Giả</label>
 						<input type="text" name="CAUHOI" class="form-control" placeholder="Bạn đang thắc mắc gì không?">
 					</div>				
 					<button type="submit">ĐĂNG KÝ NGAY</button>
+          <h3></h3>
 				</form>
 
 				<div class="loading js-loading is-hidden">

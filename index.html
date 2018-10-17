@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>KHOA CNTT - HUTECH - ĐĂNG KÝ THAM GIA SỰ KIỆN AWS - IoT</title>
+		<title>KHOA CNTT - HUTECH - ĐĂNG KÝ THAM GIA SỰ KIỆN SCRUM & TESTING SOFTWARE</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- MATERIAL DESIGN ICONIC FONT -->
 		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">		
@@ -103,28 +103,32 @@
 		<div class="wrapper" style="background-image: url('images/bg-registration-form-2.jpg');">
 			<div class="inner">
 				<form name="submit-to-google-sheet">
-					<h3>ĐĂNG KÝ THAM GIA SỰ KIỆN AWS - IoT</h3>
+					<h3>ĐĂNG KÝ THAM GIA SỰ KIỆN SCRUM & TESTING SOFTWARE</h3>
 					<div class="form-group">
 						<div class="form-wrapper">
 							<label for="">Mã SV</label>
-							<input type="text" name="f1" placeholder="Bạn có Mã SV?" class="form-control">
+							<input type="text" name="MASV" placeholder="Bạn có Mã SV?" class="form-control">
 						</div>
 						<div class="form-wrapper">
 							<label for="">Lớp</label>
-							<input type="text" name="f2" placeholder="Bạn học lớp nào?" class="form-control">
+							<input type="text" name="LOP" placeholder="Bạn học lớp nào?" class="form-control">
 						</div>
 					</div>
 					<div class="form-wrapper">
 						<label for="">Họ Và Tên</label>
-						<input type="text" name="f3" placeholder="Bạn là ai?" class="form-control">
+						<input type="text" name="TEN" placeholder="Bạn là ai?" class="form-control">
 					</div>
+          <div class="form-wrapper">
+            <label for="">Email</label>
+            <input type="text" name="EMAIL" placeholder="Địa chỉ thư điện tử?" class="form-control">
+          </div>
 					<div class="form-wrapper">
 						<label for="">Điện Thoại</label>
-						<input type="text" name="f4" placeholder="Hãy giữ liên lạc?" class="form-control">
+						<input type="text" name="DIENTHOAI" placeholder="Hãy giữ liên lạc?" class="form-control">
 					</div>
 					<div class="form-wrapper">
 						<label for="">Câu Hỏi Cho Diễn Giả</label>
-						<input type="text" name="f5" class="form-control" placeholder="Bạn đang thắc mắc gì không?">
+						<input type="text" name="CAUHOI" class="form-control" placeholder="Bạn đang thắc mắc gì không?">
 					</div>				
 					<button type="submit">ĐĂNG KÝ NGAY</button>
 				</form>
@@ -140,7 +144,7 @@
 						</div>
 					</div>
 		<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwojG0BREWv3--dj3kQdNSdDRvt_BsxGMtkFgOCTk3SRQkP8bs/exec'
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyh6vM4CmTtjCw83VmMkHdvK0_FhD8cbL1Cwhw3/exec'
     const form = document.forms['submit-to-google-sheet']
     const loading = document.querySelector('.js-loading')
     const successMessage = document.querySelector('.js-success-message')
